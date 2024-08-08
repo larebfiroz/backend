@@ -2,11 +2,20 @@
 const express = require('express');
 
 const userRouter = require('./routers/userRouter');
+const productrouter = require('./routers/productrouter');
 //  initializing express
 const app = express();
 const port = 5000;
 // middleware
 app.use('/user', userRouter);
+// middleware
+app.use(express.json());
+app.use('/user',UserRouter);
+
+
+
+
+app.use('/product',productrouter);
 // route or endpoint
 app.get('/', (req, res) => {
     res.send('response from express');
