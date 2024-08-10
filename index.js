@@ -6,11 +6,10 @@ const productrouter = require('./routers/productrouter');
 //  initializing express
 const app = express();
 const port = 5000;
-// middleware
-app.use('/user', userRouter);
+
 // middleware
 app.use(express.json());
-app.use('/user',UserRouter);
+app.use('/user',userRouter);
 
 
 
